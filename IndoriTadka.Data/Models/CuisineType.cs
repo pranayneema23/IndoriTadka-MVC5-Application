@@ -11,6 +11,7 @@ namespace IndoriTadka.Data.Models
         None,
         Italina,
         Indian,
-        Freanch
+        Freanch,
+        Chinese
     }
 }
