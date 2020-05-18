@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IndoriTadka.Data.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +9,15 @@ namespace IndoriTadka.Web.Controllers
 {
     public class HomeController : Controller
     {
+        IRestaurantData db;
+        public HomeController(IRestaurantData db)
+        {
+            this.db = db;
+        }
         public ActionResult Index()
         {
-            return View();
+            var model = db.GetAll();
+            return View(model);
         }
 
         public ActionResult About()

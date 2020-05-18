@@ -19,7 +19,7 @@ namespace IndoriTadka.Data.Services
                 };
         }
 
-        IEnumerable<Restaurant> IRestaurantData.GetAll()
+        public IEnumerable<Restaurant> GetAll()
         {
             return restaurants.OrderBy(r => r.Name);
         }

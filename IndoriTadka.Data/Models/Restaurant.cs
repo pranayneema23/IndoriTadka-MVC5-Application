@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IndoriTadka.Data.Models
 {
-    class Restaurant
+   public class Restaurant
     {
         public int Id { get; set; }
         public string Name { get; set; }
