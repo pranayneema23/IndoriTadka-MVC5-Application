@@ -15,6 +15,8 @@ namespace IndoriTadka.Web
 
             routes.MapRoute(
                 name: "Default",
+                //Even if you change the id with key..the action result help to get id and send it in querystring if
+                //id not found in RouteConfig
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
