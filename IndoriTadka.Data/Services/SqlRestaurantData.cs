@@ -42,5 +42,15 @@ namespace IndoriTadka.Data.Services
             db.SaveChanges();
 
         }
+
+        public void Delete(int id)
+        {
+            var restaurant = db.Restaurants.Find(id);
+            if(restaurant != null)
+            {
+                db.Restaurants.Remove(restaurant);
+                db.SaveChanges();
+            }
+        }
     }
 }
