@@ -19,9 +19,10 @@ namespace IndoriTadka.Web
 
             builder.RegisterControllers(typeof(MvcApplication).Assembly);//Register controller for normal controller
             builder.RegisterApiControllers(typeof(MvcApplication).Assembly); //Register api controller
-            builder.RegisterType<InMemoryRestaurantData>()
+            builder.RegisterType<SqlRestaurantData>()
                 .As<IRestaurantData>()
-                .SingleInstance();
+                .InstancePerRequest();
+            builder.RegisterType<IndoriTadkaDbContext>().InstancePerRequest();
 
             var container = builder.Build();
             //This DependencyResolver is only for MVC framework as it define in System.Web.Mvc
