@@ -8,7 +8,7 @@ using System.Data.Entity;
 
 namespace IndoriTadka.Data.Services
 {
-    class SqlRestaurantData : IRestaurantData
+    public class SqlRestaurantData : IRestaurantData
     {
         private readonly IndoriTadkaDbContext db;
 
