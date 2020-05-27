@@ -7,7 +7,7 @@
 <h2>Index</h2>
 neema.pranay23@gmail.com@Model.Count()  <!--Razor view have some special case to determine email address-->
 neema.pranay23@gmail.com@(Model.Count()) <!--use parentheses if you want to expelicit want to treat statement as C#-->
-@@pranay <!--escape @ size and not treated as C# code-->
+@@pranay <!--escape @@ size and not treated as C# code-->
 @Model.Count() <!--Encode in HTML to prevent  cross-site scripting-->
 @Html.Raw("<div>") <!--This will not encode the data into html-->  
 
