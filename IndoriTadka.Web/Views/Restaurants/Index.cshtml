@@ -25,7 +25,7 @@ neema.pranay23@gmail.com@(Model.Count()) <!--use parentheses if you want to expe
     </tr>
 
 @foreach (var item in Model) {
-    @:text <!--Static text, not C# code-->
+    <!--@@:text Static text, not C# code-->
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Name)
@@ -39,3 +39,7 @@ neema.pranay23@gmail.com@(Model.Count()) <!--use parentheses if you want to expe
 }
 
 </table>
+
+@section footer{
+    <div>This is custom footer</div>
+    }
